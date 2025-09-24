@@ -1,96 +1,52 @@
-# MEN Stack Starter Template with Session Authentication
+User Stories – Web Page (Luxury Brands Products)
+1. As a visitor, I want to browse different categories of products (makeup, perfumes, others) so that I can easily find what I am looking for.
+2. As a visitor, I want to view product details (name, price, description, image) so that I can decide whether to purchase.
+3. As a user, I want to create an account (sign up) so that I can save my information and have a personalized experience.
+4. As a user, I want to log in using my username/email and password so that I can access my account securely.
+5. As a user, I want to log out when I finish shopping so that my account stays secure.
+6. As a user, I want to add products to my shopping cart so that I can review and purchase them later.
+7. As a user, I want to search for products by name or category so that I can quickly find what I need.
+8. As an admin, I want to manage categories and products (add, edit, delete) so that the website content stays updated.
+ 
+![Image (28)](https://github.com/user-attachments/assets/fa3945c2-64c7-4d6b-814f-8c1434dc0e68)
 
-Welcome to the MEN Stack Starter Template! This template provides a foundational setup for building web applications using MongoDB, Express.js, and Node.js, complete with session authentication. This is ideal for students looking to kickstart their development projects.
 
-## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Clone the Repository](#clone-the-repository)
-- [Installation](#installation)
-- [Environment Setup](#environment-setup)
-- [Running the Application](#running-the-application)
-- [Removing Git and Creating Your Own Repo](#removing-git-and-creating-your-own-repo)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
 
-## Prerequisites
+Main Routes
 
-Before you begin, ensure you have the following installed on your machine:
-- [Node.js](https://nodejs.org/) (LTS or later)
-- [MongoDB](https://www.mongodb.com/) (make sure it's running)
-- [Git](https://git-scm.com/) (for cloning the repository)
+Categories
 
-## Clone the Repository
+Index  /categories  GET
+Show  /categories/:categoryId  GET
+Create  /categories  POST
+Update  /categories/:categoryId  PUT
+Delete  /categories/:categoryId  DELETE
 
-To clone this repository, open your terminal and run:
+Products
 
-```bash
-git clone https://github.com/SEB-PT-6-Solutions/men-stack-session-auth-template.git YOUR_APP_NAME_HERE
-```
+Index  /products  GET
+Show  /products/:productId  GET
+Create  /products  POST
+Update  /products/:productId  PUT
+Delete  /products/:productId  DELETE
+Search  /products/search  GET
 
-## Installation
-Navigate into the cloned directory:
-```bash
-cd YOUR_APP_NAME
-```
+Auth
 
-Then, install the necessary dependencies:
+Sign Up  /auth/signup  POST
+Log In  /auth/login  POST
+Log Out  /auth/logout  POST
 
-```bash
-npm i
-```
+Cart
 
-## Environment Setup
-```plaintext
-MONGODB_URI=atlas_db_uri
-SESSION_SECRET=your_secret_key
-```
-Replace `atlas_db_uri` with your desired database name and `your_secret_key` with a secure key.
+Show  /cart  GET
+Add  /cart  POST
+Update  /cart/:productId  PUT
+Delete  /cart/:productId  DELETE
 
-## Removing Git and Creating Your Own Repo
-To remove the existing Git history and create your own repository:
+<img width="720" height="272" alt="screenshot_2025-09-22_at_7 59 45___pm_720" src="https://github.com/user-attachments/assets/62746b77-991c-49f0-84bf-d79ca8959fd7" />
 
-1. Remove the existing .git folder:
-  ```bash
-  rm -rf .git
-  ```
-2. Initialize a new Git repository:
-  ```bash
-  git init
-  ```
-3. Add all files to the new repository:
-  ```bash
-  git add .
-  ```
-4. Commit the changes
-   ```bash
-   git commit -m "Initial commit"
-   ``` 
-5. Create a new repository on GitHub (or any other platform) and follow the instructions to push your local repository.
-  Make a new repository on [GitHub](https://github.com/) named `<your-project-name>`
-  Now link your local project to your remote GitHub repo:
-  ```bash
-  git remote add origin https://github.com/<github-username>/YOUR_APP_NAME.git
-  git push origin main
-  ```
 
-> 🚨 Do not copy the above command. It will not work. Your GitHub username will replace `<github-username>` (including the `<` and `>`) in the URL above.
 
-## Running the application
-```bash
-npm run dev
-```
 
-## Features
-- User registration and login with session management
-- Basic CRUD operations
-- Modular file structure
-- Example routes and controllers
-- Basic user model setup
-- Middleware for templates and authorization
-- Basic authentication flow
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Happy Coding!
