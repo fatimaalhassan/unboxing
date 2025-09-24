@@ -12,6 +12,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const isSignedIn = require('./middleware/is-signed-in.js');
 const passUserToView = require('./middleware/pass-user-to-view.js');
+const path = require('path');
 
 // Controllers
 const authController = require('./controllers/auth.js');
@@ -27,6 +28,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 // Morgan for logging HTTP requests
 app.use(morgan('dev'));
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Session Storage with MongoStore
 app.use(
