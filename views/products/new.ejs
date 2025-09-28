@@ -1,26 +1,30 @@
- <%- include('../partials/_navbar.ejs') %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add New product</title>
+    <title>Add New Product</title>
   </head>
   <body>
-    <h1>Add New product</h1>
-    <form action="/product" method="POST">
-      <label for="Makeup">Makeup:</label>
-      <input type="text" name="Makeup" id="Makeup" />
+    <h1>Add New Product</h1>
+    <form action="/products" method="POST">
+      <label for="productName">Product Name:</label>
+      <input type="text" name="productName" id="productName" required />
 
-      <label for="Perfume">Perfume:</label>
-      <input type="text" name="Perfume" id="Perfume" />
+      <label for="category">Category:</label>
+      <select name="category" id="category" required>
+        <option value="makeup">Makeup</option>
+        <option value="perfume">Perfume</option>
+        <option value="giftWrapping">Gift Wrapping</option>
+      </select>
 
-      <label for="price">Price:</label>
-      <input type="number" name="price" id="price" />
+      <label for="price">Price (BHD):</label>
+      <input type="number" name="price" id="price" step="0.01" required />
 
-      <label for="giftWrapping">giftWrapping:</label>
-      <input type="number" name="giftWrapping" id="giftWrapping" />
-      <button type="submit">Add product</button>
+      <label for="description">Description:</label>
+      <textarea name="description" id="description" rows="3"></textarea>
+
+      <button type="submit">Add Product</button>
     </form>
   </body>
 </html>

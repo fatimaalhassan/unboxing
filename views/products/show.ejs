@@ -1,1 +1,35 @@
  <%- include('../partials/_navbar.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= product.productName %> | Product Details</title>
+  </head>
+  <body>
+    <h1><%= product.productName %></h1>
+
+    <h2>Details</h2>
+    <p>Category: <%= product.category %></p>
+    <p>Price: <%= product.price %> BHD</p>
+    <% if (product.description) { %>
+      <p>Description: <%= product.description %></p>
+    <% } %>
+
+    <h2>Seller:</h2>
+    <p><%= product.owner.username %></p>
+
+    <h2>Favourites</h2>
+    <p>Favourited by <%= product.favouritedByUsers.length %> people.</p>
+
+    <% if (userHasFavourited) { %>
+      <form action="/products/<%= product._id %>/favourite-by/<%= user._id %>?_method=DELETE" method="POST">
+        <button type="submit">Remove from Favourites</button>
+      </form>
+    <% } else { %>
+      <form action="/products/<%= product._id %>/favourite-by/<%= user._id %>" method="POST">
+        <button type="submit">Add to Favourites</button>
+      </form>
+    <% } %>
+  </body>
+</html>

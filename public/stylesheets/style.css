@@ -23,7 +23,7 @@ nav {
 }
 
 nav .logo {
-    font-size: 30px;
+    font-size: 50px;
     text-transform: uppercase;
     color: #a93939;
 }
@@ -37,6 +37,7 @@ nav ul {
 
 nav ul li {
     margin-right: 30px;
+    margin-top: 0;
 }
 
 nav ul li a {
@@ -45,10 +46,13 @@ nav ul li a {
     transition: 0.3s;
     
 }
+ nav ul li a:hover,:active{
+    background: rgb(150, 113, 113);
+ }
+    
 
-nav ul li a:hover,
 nav ul li a.activ {
-    background: #ebe4e4;
+    background: #5a2424;
     color: #000;
 }
 
@@ -71,7 +75,7 @@ nav ul li a.activ {
   height: auto;
   display: flex;     
   object-fit: contain;
-  margin: 30px;  
-  margin-top: 20px; 
+  margin-left:40px;
+  margin-top: 15px; 
+  margin-bottom: 20;
 }
-
