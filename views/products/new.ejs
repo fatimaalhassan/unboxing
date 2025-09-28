@@ -1,0 +1,26 @@
+ <%- include('../partials/_navbar.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New product</title>
+  </head>
+  <body>
+    <h1>Add New product</h1>
+    <form action="/product" method="POST">
+      <label for="Makeup">Makeup:</label>
+      <input type="text" name="Makeup" id="Makeup" />
+
+      <label for="Perfume">Perfume:</label>
+      <input type="text" name="Perfume" id="Perfume" />
+
+      <label for="price">Price:</label>
+      <input type="number" name="price" id="price" />
+
+      <label for="giftWrapping">giftWrapping:</label>
+      <input type="number" name="giftWrapping" id="giftWrapping" />
+      <button type="submit">Add product</button>
+    </form>
+  </body>
+</html>
