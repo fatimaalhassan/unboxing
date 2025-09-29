@@ -1,0 +1,28 @@
+<<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Products</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <div class="products-page">
+    
+    <h1>Here's all the products</h1>
+
+    <a href="/products/new">Add a New Product</a>
+
+    <ul>
+      <% products.forEach((product) => { %>
+        <li>
+            <img src="<%= product.img %>" alt="<%= product.description %>" width="300px">
+          A Product in <%= product.name %> owned by <%= product.owner.username %>
+          <a href="/products/<%= product._id %>">View more details.</a>
+        </li>
+      <% }) %>
+    </ul>
+</div>
+  </body>
+</html>

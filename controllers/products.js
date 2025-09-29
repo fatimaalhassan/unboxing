@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
     res.redirect("/products");
   } catch (error) {
     console.log(error);
-    res.redirect("/products/new");
+    res.redirect("/");
   }
 });
 
@@ -32,16 +32,11 @@ router.get("/:id", async (req, res) => {
   try {
     const product = await Product.findById(req.params.id)
       .populate("owner")
-      .populate("favouritedByUsers");
 
-    const userHasFavourited = product.favouritedByUsers.some(
-      (user) => user.equals(req.session.user?._id)
-    );
-
-    res.render("products/show.ejs", { product, userHasFavourited });
+    res.render("products/show.ejs", { product });
   } catch (error) {
     console.log(error);
-    res.redirect("/products");
+    res.redirect("/");
   }
 });
 
@@ -51,7 +46,7 @@ router.get("/:id/edit", async (req, res) => {
     res.render("products/edit.ejs", { product });
   } catch (error) {
     console.log(error);
-    res.redirect("/products");
+    res.redirect("/");
   }
 });
 
@@ -67,7 +62,7 @@ router.put("/:id", async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-    res.redirect("/products");
+    res.redirect("/");
   }
 });
 
@@ -83,7 +78,7 @@ router.delete("/:id", async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-    res.redirect("/products");
+    res.redirect("/");
   }
 });
 
