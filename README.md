@@ -10,6 +10,7 @@ User Stories – Web Page (Luxury Brands Products)
  
 ![Image (28)](https://github.com/user-attachments/assets/fa3945c2-64c7-4d6b-814f-8c1434dc0e68)
 
+<img width="1920" height="1080" alt="Screenshot 2025-10-01 205431" src="https://github.com/user-attachments/assets/e8dce1d5-4f0b-43c2-80d9-9e1fc3f467a1" />
 
 
 Main Routes
@@ -59,7 +60,6 @@ References:
 
 	
 
-	<img width="1920" height="1080" alt="Screenshot 2025-10-01 205431" src="https://github.com/user-attachments/assets/e8dce1d5-4f0b-43c2-80d9-9e1fc3f467a1" />
 
  
  
