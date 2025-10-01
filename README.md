@@ -56,6 +56,9 @@ References:
 	•	Yehia Tech YouTube channel (used for understanding the basics of building web pages).
     https://www.youtube.com/watch?v=Pwatx1n1Ws0&t=3616s
 
+
+	
+
 	<img width="1920" height="1080" alt="Screenshot 2025-10-01 205431" src="https://github.com/user-attachments/assets/e8dce1d5-4f0b-43c2-80d9-9e1fc3f467a1" />
 
  
