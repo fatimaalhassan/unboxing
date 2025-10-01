@@ -185,7 +185,7 @@ nav ul li a.active {
   display: inline-block;
   margin-bottom: 2rem;
   padding: 0.5rem 1rem;
-  background-color: #934b57;
+  background-color: #951b23;
   color: white;
   border-radius: 5px;
   text-decoration: none;
@@ -244,7 +244,7 @@ nav ul li a.active {
 .products-page ul li form button {
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: #a1131d;
+  background-color: #951b23;
   color: white;
   border: none;
   border-radius: 5px;
