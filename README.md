@@ -47,6 +47,13 @@ Delete  /cart/:productId  DELETE
 <img width="720" height="272" alt="screenshot_2025-09-22_at_7 59 45___pm_720" src="https://github.com/user-attachments/assets/62746b77-991c-49f0-84bf-d79ca8959fd7" />
 
 
+References:
 
+	•	Video tutorial by Abdulrahman Gamal (used for styling and CSS part).
+    https://youtu.be/1WeVMnWqoqA
+    https://www.youtube.com/watch?v=Iy7oFI76FpE&t=2094s
 
-
+	•	Yehia Tech YouTube channel (used for understanding the basics of building web pages).
+    https://www.youtube.com/watch?v=Pwatx1n1Ws0&t=3616s
+ 
+ 
