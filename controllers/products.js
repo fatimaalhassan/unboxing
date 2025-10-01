@@ -13,6 +13,37 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get('/makeup', async (req, res) => {
+   try {
+    const products = await Product.find({category: "makeup"}).populate("owner");
+    res.render("products/index.ejs", { products });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
+router.get('/perfume', async (req, res) => {
+   try {
+    const products = await Product.find({category: "perfume"}).populate("owner");
+    res.render("products/index.ejs", { products });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
+router.get('/giftwrapping', async (req, res) => {
+  try {
+    const products = await Product.find({category: "giftWrapping"}).populate("owner");
+    res.render("products/index.ejs", { products });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
+
 router.get("/new", (req, res) => {
   res.render("products/new.ejs");
 });
@@ -82,30 +113,32 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-router.post("/:id/favourite-by/:userId", async (req, res) => {
-  try {
-    const product = await Product.findById(req.params.id);
-    if (!product.favouritedByUsers.includes(req.params.userId)) {
-      product.favouritedByUsers.push(req.params.userId);
-      await product.save();
-    }
-    res.redirect(`/products/${req.params.id}`);
-  } catch (error) {
-    console.log(error);
-    res.redirect(`/products/${req.params.id}`);
-  }
-});
 
-router.delete("/:id/favourite-by/:userId", async (req, res) => {
-  try {
-    const product = await Product.findById(req.params.id);
-    product.favouritedByUsers.pull(req.params.userId);
-    await product.save();
-    res.redirect(`/products/${req.params.id}`);
-  } catch (error) {
-    console.log(error);
-    res.redirect(`/products/${req.params.id}`);
-  }
-});
+
+// router.post("/:id/favourite-by/:userId", async (req, res) => {
+//   try {
+//     const product = await Product.findById(req.params.id);
+//     if (!product.favouritedByUsers.includes(req.params.userId)) {
+//       product.favouritedByUsers.push(req.params.userId);
+//       await product.save();
+//     }
+//     res.redirect(`/products/${req.params.id}`);
+//   } catch (error) {
+//     console.log(error);
+//     res.redirect(`/products/${req.params.id}`);
+//   }
+// });
+
+// router.delete("/:id/favourite-by/:userId", async (req, res) => {
+//   try {
+//     const product = await Product.findById(req.params.id);
+//     product.favouritedByUsers.pull(req.params.userId);
+//     await product.save();
+//     res.redirect(`/products/${req.params.id}`);
+//   } catch (error) {
+//     console.log(error);
+//     res.redirect(`/products/${req.params.id}`);
+//   }
+// });
 
 module.exports = router;

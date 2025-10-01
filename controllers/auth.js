@@ -69,19 +69,4 @@ router.get("/sign-out", (req, res) => {
   });
 });
 
-// Product pages (no session destroy!)
-router.get('/makeup', (req, res) => {
-  res.render('products/makeup.ejs');
-});
-
-router.get('/perfume', (req, res) => {
-  res.render('products/perfume.ejs');
-});
-
-router.get('/giftwrapping', (req, res) => {
-  res.render('products/giftWrapping.ejs');
-});
-
-
-
 module.exports = router;
