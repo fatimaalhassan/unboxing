@@ -12,6 +12,19 @@ User Stories – Web Page (Luxury Brands Products)
 
 <img width="1920" height="1080" alt="Screenshot 2025-10-01 205431" src="https://github.com/user-attachments/assets/e8dce1d5-4f0b-43c2-80d9-9e1fc3f467a1" />
 
+	
+🚀 Next Steps
+
+Planned future enhancements for the project include:
+
+	•	Adding a user login and registration system.
+
+	•	Creating more product categories to expand the app’s content.
+
+	•	Implementing a shopping cart feature for customers to save and purchase items easily.
+
+	
+ 
 
 Main Routes
 
@@ -58,6 +71,10 @@ References:
     https://www.youtube.com/watch?v=Pwatx1n1Ws0&t=3616s
 
 
+
+
+	
+	
 	
 
 
