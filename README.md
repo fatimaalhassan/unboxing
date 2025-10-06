@@ -12,6 +12,20 @@ User Stories – Web Page (Luxury Brands Products)
 
 <img width="1920" height="1080" alt="Screenshot 2025-10-01 205431" src="https://github.com/user-attachments/assets/e8dce1d5-4f0b-43c2-80d9-9e1fc3f467a1" />
 
+App Name: UNBOXING
+
+Description:
+UNBOXING is an elegant shopping application where users can order makeup, perfumes, and luxury gift wrapping services. All products featured in the app are 100% authentic and from top international brands.
+I created this app because I was truly inspired by the idea of offering a high-end and trustworthy shopping experience that combines beauty, fragrance, and gifting in one place.
+
+This project was built using the following technologies and tools:
+• Node.js – to run the server-side environment.
+• Express.js – to handle routing and manage server requests efficiently.
+• EJS (Embedded JavaScript Templates) – to render dynamic content and pages.
+• HTML5 – for creating the basic structure of the web pages.
+• CSS3 – for styling and visual design.
+• JavaScript (ES6) – for adding interactivity and functionality to the app.
+• MVC Architecture (Model–View–Controller) – used to organize the project structure clearly and maintain scalability.
 	
 🚀 Next Steps
 
